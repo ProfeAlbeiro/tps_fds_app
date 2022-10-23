@@ -167,13 +167,19 @@ header{
 }
 /* Nosotros */
 .nosotros{
+    width: 100%;
     height: 90vh;
 }
 .nos-fila{
     width: 100%;
     height: 33.33%;
 }
-.nos-col-ext{
+.nos-col-izq{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.nos-col-der{
     width: 40%;
     height: 100%;
     float: left;
@@ -187,6 +193,20 @@ header{
 }
 .nosotros img{
     border-radius: 50%;
+}
+.nosotros .nos-col-izq .subtitulo,
+.nosotros .nos-col-izq .parrafo{
+    text-align: right;
+}
+.nosotros .nos-col-izq a{
+    margin-right: 0;
+}
+.nosotros .nos-col-der .subtitulo,
+.nosotros .nos-col-der .parrafo{
+    text-align: left;
+}
+.nosotros .nos-col-der a{
+    margin-left: 0;
 }
 /* Contáctenos */
 .contactenos{
