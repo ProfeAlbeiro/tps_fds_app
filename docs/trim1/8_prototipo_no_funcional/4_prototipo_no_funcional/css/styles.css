@@ -35,7 +35,9 @@ body{
 .color-blanco{
     background: #FFF;
 }
-
+.clear{
+    clear: both;
+}
 /* ------------------------------------------------------------------------------------- */
 /* FUENTES: ROBOTO Y YANONE ------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------- */
@@ -50,30 +52,45 @@ body{
     height: 70px;
     background: #343A40;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
 }
 /* Subtítulos */
 .subtitulo{
     font-family: 'Roboto', sans-serif;
+    background: #CCC;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
 }
 /* Párrafos */
 .parrafo{
     font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    padding: 10px;
 }
 
 /* ------------------------------------------------------------------------------------- */
 /* IMÁGENES ---------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------- */
 .imagen{
-	
+	text-align: center;
+    padding: 10px;
 }
 .imagen img{	
-		
+	width: 150px;
+    height: auto;	
 }
 /* ------------------------------------------------------------------------------------- */
 /* BOTONES DE ENLACE ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------- */
 .ver{
 	font-family: 'Yanone Kaffeesatz', sans-serif;
+    background: #CCC;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
 }
 .ver a{
 	
@@ -126,6 +143,7 @@ nav{
 /* Encabezado y Secciones */
 header, section{
     height: 600px;
+    min-height: 600px;
 }
 header{
     background-image: url(../img/header.jpg);
@@ -138,11 +156,13 @@ section img{
     border-radius: 50%;
 }
 /* Portafolio */
+.portafolio{
+    min-height: 600px;
+}
 .port-col{
     width: 33.33%;
     height: 100%;
     padding: 20px;
-    /* text-align: center; */
     float: left;
 }
 /* Nosotros */
