@@ -278,6 +278,25 @@ footer .parrafo{
     .contenedor{
         width: 100%;        
     }
+    /* Navegador */
+    nav{        
+        height: 150px;        
+    }
+    /* Logo */
+    .logo{
+        width: 100%;
+        height: 66.66%;
+    }    
+    /* Menú */
+    .menu{        
+        width: 80%;
+        height: 33.33%;
+    }
+    /* Ingreso */
+    .ingreso{
+        width: 20%;
+        height: 33.33%;        
+    }
 }
 
 /* ------------------------------------------------------------------------------------- */
