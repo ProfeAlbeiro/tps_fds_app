@@ -180,7 +180,9 @@ header{
 .portafolio{
     height: auto;
 }
-.port-col{
+.port-col-izq,
+.port-col-cnt,
+.port-col-der{
     width: 33.33%;
     height: 100%;
     padding: 20px;
@@ -296,6 +298,19 @@ footer .parrafo{
     .ingreso{
         width: 20%;
         height: 33.33%;        
+    }
+    /* Portafolio */    
+    .port-col-izq{
+        width: 100%;
+        height: 50%;        
+    }
+    .port-col-cnt,
+    .port-col-der{
+        width: 50%;
+        height: 50%;
+    }    
+    .portafolio img{
+        width: 100px;
     }
 }
 
