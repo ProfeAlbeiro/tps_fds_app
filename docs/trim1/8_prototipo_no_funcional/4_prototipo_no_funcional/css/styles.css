@@ -400,7 +400,8 @@ footer .parrafo{
     }
     /* Encabezado */
     header{
-        height: 300px;        
+        height: 300px;
+        background-attachment: initial;        
     }
     /* Portafolio */    
     .port-col-izq{
