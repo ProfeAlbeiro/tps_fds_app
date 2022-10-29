@@ -285,17 +285,17 @@ footer .parrafo{
     /* Logo */
     .logo{
         width: 100%;
-        height: 66.66%;
+        height: 100px;
     }    
     /* Menú */
     .menu{        
         width: 80%;
-        height: 33.33%;
+        height: 50px;
     }
     /* Ingreso */
     .ingreso{
         width: 20%;
-        height: 33.33%;        
+        height: 50px;        
     }
     /* Portafolio */    
     .port-col-izq{
@@ -373,3 +373,103 @@ footer .parrafo{
 /* ------------------------------- IV. RESPONSIVE DESIGN ------------------------------- */
 /* ------------------------------------- CELULARES ------------------------------------- */
 /* ------------------------------------------------------------------------------------- */
+@media (max-width: 768px) {        
+    /* Contenedor */
+    .contenedor{
+        width: 100%;
+        max-width: 100%!important;        
+    }
+    /* Navegador */
+    nav{        
+        height: 150px;        
+    }
+    /* Logo */
+    .logo{
+        width: 100%;
+        height: 50px;        
+    }    
+    /* Menú */
+    .menu{        
+        width: 100%;
+        height: 50px;
+    }
+    /* Ingreso */
+    .ingreso{
+        width: 100%;
+        height: 50px;        
+    }
+    /* Encabezado */
+    header{
+        height: 300px;        
+    }
+    /* Portafolio */    
+    .port-col-izq{
+        width: 100%;
+        height: 50%;        
+    }
+    .port-col-cnt,
+    .port-col-der{
+        width: 100%;
+        height: 50%;
+    }    
+    .portafolio img{
+        width: 100px;
+    }    
+    /* Nosotros */    
+    .nos-fila-arr,
+    .nos-fila-cnt,
+    .nos-fila-abj{
+        width: 100%;
+        height: 33.33%;
+    }
+    .nos-fila-arr .nos-col-der,
+    .nos-fila-abj .nos-col-der{
+        display: none;
+    }
+    .nos-fila-arr .nos-col-izq,
+    .nos-fila-abj .nos-col-izq{
+        width: 70%;
+    }
+    .nos-fila-arr .nos-col-cnt,
+    .nos-fila-abj .nos-col-cnt{
+        width: 30%;
+        background: #FFF;
+    }
+    .nos-fila-cnt .nos-col-izq{
+        display: none;
+    }
+    .nos-fila-cnt .nos-col-cnt{
+        width: 30%;
+    }
+    .nos-fila-cnt .nos-col-der{
+        width: 70%;
+    }    
+    /* Contáctenos */
+    .cont-col-izq{
+        width: 100%;
+        height: 50%;
+    }
+    .cont-col-der{
+        width: 100%;
+        height: 50%;        
+    }
+    .cont-col-der .cont-fila-arr,
+    .cont-col-der .cont-fila-abj{
+        width: 100%;
+        height: 50%;
+        float: left;
+    }
+    .cont-fila-arr iframe{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .cont-fila-abj .espacio-temporal{
+        height: 70%;
+        padding-top: 7px;
+    }
+    .cont-fila-abj .social-media{
+        height: 30%;
+        padding-top: 2px;        
+    }    
+}
