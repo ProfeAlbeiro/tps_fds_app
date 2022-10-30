@@ -103,8 +103,7 @@ body {
 }
 
 .ver a {
-  display: block;
-  width: 50%;
+  display: block;  
   margin: auto;
   text-decoration: none;
   color: #eee;
