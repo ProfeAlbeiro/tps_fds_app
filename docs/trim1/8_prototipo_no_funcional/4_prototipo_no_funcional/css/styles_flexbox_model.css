@@ -2,36 +2,6 @@
 /* -------------------------- I. GENERALIDADES DEL CONTENIDO --------------------------- */
 /* ------------------------------------------------------------------------------------- */
 
-.padre{
-    width: 100%;
-    height: 1000px;
-    display: flex;    
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;    
-}
-.hijo1,
-.hijo2,
-.hijo3{
-    /* width: 200px; */
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-.hijo1{
-    order: 1;
-    flex-basis: 20%;
-}
-.hijo2{
-    order: 2;
-    flex-basis: 65%;
-}
-.hijo3{
-    order: 3;
-    flex-basis: 15%;
-}
-
 /* ------------------------------------------------------------------------------------- */
 /* FUENTES: ROBOTO Y YANONE ------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------- */
@@ -53,7 +23,7 @@ body{
 }
 /* Borde */
 .borde{
-    border: 1px solid #000;
+    border: 1px solid #CCC;
 }
 /* Fondo color Negro */
 .color-negro{
@@ -82,7 +52,7 @@ body{
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: #FFF;
     text-align: center;
-    padding: 20px;
+    align-items: center;    
     clear: both;
 }
 /* Subtítulos */
@@ -166,33 +136,51 @@ body{
 /* ------------------------------------------------------------------------------------- */
 /* Contenedor */
 .contenedor{    
-    
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+/* Navegador, Encabezado, Secciones, footer */
+nav,
+.titulo,
+section,
+footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;    
 }
 /* Navegador */
-nav{    
-    
+nav{
+    height: 50px;
 }
 /* Logo */
-.logo{    
+.logo{
+    flex: 20%;    
 }
 .logo img{
 }
 /* Menú */
 .menu{
-    
+    flex: 65%;
+    background: #EF8814;    
 }
 /* Ingreso */
 .ingreso{
-    
+    flex: 15%;
 }
+
 /* Encabezado */
 header{    
+    min-height: 83.5vh;
     background-image: url(../img/header.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
 }
 /* Portafolio */
-.portafolio{    
+section.portafolio{    
+    height: auto!important;
 }
 .port-col-izq,
 .port-col-cnt,
