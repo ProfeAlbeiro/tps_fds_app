@@ -20,7 +20,7 @@
 
 /* Cuerpo */
 body {
-    /* background: #ddd; */
+    background: #ddd;
 }
 
 /* Borde */
@@ -236,7 +236,7 @@ header {
 .nos-fila-abj {
     flex: 1;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 .nos-col-izq,
@@ -278,7 +278,7 @@ header {
     height: auto;
     min-height: 82.5vh;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 .cont-col-izq,
@@ -292,13 +292,12 @@ header {
 }
 
 .cont-fila-arr {
-    height: 65%;
-    display: flex;
-    flex-flow: row nowrap;
+    height: 65%;    
 }
 
 .cont-fila-arr iframe {
-    flex: 1;
+    width: 100%;
+    height: 100%;
     border: 0;
 }
 
@@ -379,7 +378,7 @@ footer .parrafo {
     .nos-fila-abj {
         flex: 1;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
     }
     .nos-fila-arr .nos-col-der,
     .nos-fila-abj .nos-col-der,
@@ -423,7 +422,119 @@ footer .parrafo {
     }
     /* Contáctenos */
     .contactenos {
-        height: 82.5vh;
+        height: auto;
+        min-height: 82.5vh;        
+        flex-flow: column wrap;
+    }    
+    .cont-col-der {
+        display: flex;
+        flex-flow: row wrap;       
+    }
+    .cont-fila-arr {
+        width: 50%;
+        height: 100%;
+    }
+    .cont-fila-abj {
+        flex: 50%;
+        height: auto;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------- IV. RESPONSIVE DESIGN ------------------------------- */
+/* ------------------------------------- CELULARES ------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Navegador */
+    nav {        
+        flex-flow: column nowrap;
+    }
+    /* Logo */
+    .logo {
+        flex: auto;
+        width: 100%;
+        height: 50px;
+    }
+
+    /* Menú */
+    .menu {
+        flex: auto;
+        height: 50px;
+        background: #EF8814;
+    }
+
+    /* Ingreso */
+    .ingreso {
+        flex: auto;
+        height: 50px;
+    }
+    /* Encabezado */
+    header{
+        min-height: auto;
+        background-attachment: initial;
+        height: 30vh;
+    }
+    /* Portafolio */   
+    .port-col-cnt,
+    .port-col-der {
+        flex: 100%;
+    }
+    
+    /* Nosotros */    
+    .nos-fila-arr .nos-col-der,
+    .nos-fila-abj .nos-col-der,
+    .nos-fila-cnt .nos-col-izq{
+        display: none;
+    }
+    .nos-fila-arr .nos-col-izq,
+    .nos-fila-abj .nos-col-izq{
+        order: 2;
+    }
+    .nos-fila-arr .nos-col-cnt,
+    .nos-fila-abj .nos-col-cnt{
+        order: 1;
+    }
+    .nos-col-izq,
+    .nos-col-der {
+        flex: 100%;
+        padding: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    
+    .nos-col-cnt {
+        flex: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+    }
+
+    .nosotros .nos-col-izq .subtitulo,
+    .nosotros .nos-col-izq .parrafo {
+        text-align: center;
+    }
+
+    .nosotros .nos-col-izq a {
+        margin-right: 0;
+    }
+
+    .nosotros .nos-col-der .subtitulo,
+    .nosotros .nos-col-der .parrafo {
+        text-align: center;
+    }    
+    .nosotros a {
+        width: 100%;
+        margin-left: 0;
+    }
+    /* Contáctenos */
+    .contactenos {
+        height: auto;
         min-height: 82.5vh;        
         flex-flow: column wrap;
     }    
@@ -444,11 +555,8 @@ footer .parrafo {
         flex-flow: column wrap;
         justify-content: center;
     }
-    
-}
+    /* Pie de Página */
+    footer{
 
-/* ------------------------------------------------------------------------------------- */
-/* ------------------------------- IV. RESPONSIVE DESIGN ------------------------------- */
-/* ------------------------------------- CELULARES ------------------------------------- */
-/* ------------------------------------------------------------------------------------- */
-@media (max-width: 768px) {}
+    }
+}
