@@ -436,6 +436,7 @@ footer .parrafo{
     .nos-col-cnt,
     .nos-col-der{
         padding: 20px;
+        height: 228px;
     }  
     .nos-fila-arr,
     .nos-fila-cnt,
@@ -457,7 +458,17 @@ footer .parrafo{
     }
     .nos-fila-cnt .nos-col-der{
         width: 100%;
-    }    
+    }
+    .nos-fila-arr .nos-col-izq,
+    .nos-fila-abj .nos-col-izq{
+        position: relative;
+        top: 228px;
+    }
+    .nos-fila-arr .nos-col-cnt,
+    .nos-fila-abj .nos-col-cnt{
+        position: relative;
+        top: -228px;
+    }
     /* Contáctenos */
     .cont-col-izq{
         width: 100%;
