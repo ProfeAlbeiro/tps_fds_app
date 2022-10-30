@@ -412,13 +412,8 @@ footer .parrafo {
   }
   .cont-fila-arr {
     height: auto;
-    flex: 1;
-  }
-  .cont-fila-arr iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
+    flex: 1;    
+  }  
   .cont-fila-abj {
     height: auto;
     flex: 1;
@@ -548,7 +543,11 @@ footer .parrafo {
     margin-left: 0;
   }
 
-  /* Pie de Página */
-  footer {
-  }
+  /* Contáctenos */    
+  .cont-fila-arr {    
+    flex: 100%;    
+  }  
+  .cont-fila-abj {    
+    flex: 100%;    
+  }  
 }
