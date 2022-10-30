@@ -213,7 +213,7 @@ header {
 }
 
 /* Portafolio */
-section.portafolio {
+.portafolio {
     height: auto;
 }
 
@@ -321,27 +321,104 @@ footer .parrafo {}
 /* ------------------------------------------------------------------------------------- */
 /* Tablet: Media Queries */
 @media (max-width: 992px) {
+
+    /* Contenedor */
+    .contenedor {
+        width: 100%;
+    }
+
     /* Navegador */
     nav {
-        height: 150px;        
-        flex-flow: row wrap;        
+        height: 150px;
+        flex-flow: row wrap;
     }
+
     /* Logo */
     .logo {
         flex: auto;
         width: 100%;
         height: 100px;
-    }    
+    }
+
     /* Menú */
     .menu {
         flex: 80%;
-        height: 50px;        
+        height: 50px;
         background: #EF8814;
     }
+
     /* Ingreso */
     .ingreso {
-        flex: 20%;        
-        height: 50px;       
+        flex: 20%;
+        height: 50px;
+    }
+
+    /* Portafolio */
+    .portafolio {
+        height: auto;
+        min-height: 82.5vh;
+        flex-flow: row wrap;
+    }
+
+    .port-col-cnt,
+    .port-col-der {
+        flex: 1;
+    }
+
+    /* Nosotros */
+    /* .nosotros {
+        height: auto;
+        min-height: 82.5vh;
+        display: flex;
+        flex-flow: column wrap;
+    } */
+    
+    .nos-fila-arr,
+    .nos-fila-cnt,
+    .nos-fila-abj {
+        flex: 1;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .nos-fila-arr .nos-col-der,
+    .nos-fila-abj .nos-col-der,
+    .nos-fila-cnt .nos-col-izq{
+        display: none;
+    }
+    
+    .nos-col-izq,
+    .nos-col-der {
+        flex: 40%;
+        padding: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    
+    .nos-col-cnt {
+        flex: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+    }
+
+    .nosotros .nos-col-izq .subtitulo,
+    .nosotros .nos-col-izq .parrafo {
+        text-align: right;
+    }
+
+    .nosotros .nos-col-izq a {
+        margin-right: 0;
+    }
+
+    .nosotros .nos-col-der .subtitulo,
+    .nosotros .nos-col-der .parrafo {
+        text-align: left;
+    }
+
+    .nosotros .nos-col-der a {
+        margin-left: 0;
     }
 }
 
