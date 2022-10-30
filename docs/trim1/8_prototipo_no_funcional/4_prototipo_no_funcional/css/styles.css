@@ -407,20 +407,36 @@ footer .parrafo{
     /* Portafolio */    
     .port-col-izq{
         width: 100%;
-        height: 50%;        
+        height: 50%;
+        float: right!important;
     }
     .port-col-cnt,
     .port-col-der{
         width: 100%;
         height: 50%;
+        float: right!important;
     }    
     .portafolio img{
         width: 100px;
     }    
     /* Nosotros */
     .nosotros{
-        height: 100vh;
-    }   
+        height: auto;
+    }
+    .nosotros .subtitulo{    
+        text-align: center!important;        
+    }
+    .nosotros .parrafo{
+        text-align: justify!important;
+    }
+    .nosotros .ver a{
+        margin: auto;
+    }
+    .nos-col-izq,
+    .nos-col-cnt,
+    .nos-col-der{
+        padding: 20px;
+    }  
     .nos-fila-arr,
     .nos-fila-cnt,
     .nos-fila-abj{
