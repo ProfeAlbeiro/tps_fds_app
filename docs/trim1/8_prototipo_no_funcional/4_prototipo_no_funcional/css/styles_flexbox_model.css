@@ -291,7 +291,7 @@ header {
     flex-flow: column nowrap;
 }
 
-.cont-col-der .cont-fila-arr {
+.cont-fila-arr {
     height: 65%;
     display: flex;
     flex-flow: row nowrap;
@@ -311,9 +311,17 @@ header {
 }
 
 /* Pie de Página */
-footer {}
-
-footer .parrafo {}
+footer {
+    height: auto;
+}
+footer .parrafo {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 0.7em;
+}
 
 /* ------------------------------------------------------------------------------------- */
 /* ------------------------------ III. RESPONSIVE DESIGN ------------------------------- */
@@ -366,13 +374,6 @@ footer .parrafo {}
     }
 
     /* Nosotros */
-    /* .nosotros {
-        height: auto;
-        min-height: 82.5vh;
-        display: flex;
-        flex-flow: column wrap;
-    } */
-    
     .nos-fila-arr,
     .nos-fila-cnt,
     .nos-fila-abj {
@@ -420,6 +421,30 @@ footer .parrafo {}
     .nosotros .nos-col-der a {
         margin-left: 0;
     }
+    /* Contáctenos */
+    .contactenos {
+        height: 82.5vh;
+        min-height: 82.5vh;        
+        flex-flow: column wrap;
+    }    
+    .cont-col-der {
+        display: flex;
+        flex-flow: row wrap;       
+    }
+    .cont-fila-arr {
+        flex: 50%;
+        height: 100%;        
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .cont-fila-abj {
+        flex: 50%;
+        height: auto;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    
 }
 
 /* ------------------------------------------------------------------------------------- */
