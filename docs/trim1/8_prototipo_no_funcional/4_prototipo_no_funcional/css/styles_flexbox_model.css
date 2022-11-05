@@ -142,7 +142,12 @@ footer {
 
 /* Navegador */
 nav {
-  height: 50px;
+  flex-flow: row wrap;	
+	height: 50px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	font-size: 1.3em;
 }
 
 /* Logo */
