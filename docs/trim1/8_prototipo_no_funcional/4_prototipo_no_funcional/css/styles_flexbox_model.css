@@ -18,6 +18,10 @@
   padding: 0;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 /* Cuerpo */
 body {
   background: #ddd;
@@ -27,6 +31,12 @@ body {
 /* Borde */
 .borde {
   border: 1px solid #ccc;
+}
+
+/* Tope: Navegación */
+.tope{	
+	position: relative;
+	top: -49px;	
 }
 
 /* Fondo color Negro */
