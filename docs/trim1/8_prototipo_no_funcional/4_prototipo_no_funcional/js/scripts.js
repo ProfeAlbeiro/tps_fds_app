@@ -1,7 +1,14 @@
 function validarLogin() {
+    // Frena el evento: Click
     event.preventDefault();
+    // Captura el valor que tienen los controles del formulario
     let correo = document.getElementById('correo').value;
     let pass = document.getElementById('pass').value;
-    console.log("Su correo modificado es: " + correo + " y su password es: " + pass);
-    // alert("Su correo es: " + correo + " y su password es: " + pass);
+    // Validar el acceso al Dashboard: Administrador
+    if (correo == "admin@correo.com" && pass == "12345") {
+        window.location = '../admin.html';
+    } else {
+        alert('Los datos son incorrectos');
+    }
+    
 }
