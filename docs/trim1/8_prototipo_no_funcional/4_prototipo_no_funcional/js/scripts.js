@@ -9,9 +9,10 @@ capturaId.forEach(captura => {
 // Método Principal
 function mainIndex() {
     id = event.target.getAttribute("id");
+    alert(id);    
     if (id == "submint_login") {
         validarLogin();
-    }    
+    }
 }
 
 /* -------------------------------------------------------------------------------- */
