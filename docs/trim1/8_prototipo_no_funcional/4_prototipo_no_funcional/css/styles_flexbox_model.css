@@ -206,6 +206,105 @@ body {
 }
 
 /* ------------------------------------------------------------------------------------- */
+/* FORMULARIOS ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* Validación de Formularios: Html y Css */
+
+
+/* Formularios en General */
+.form{
+	flex: 1;
+	display: flex;
+	flex-flow: column wrap;	
+	font-family: 'Roboto', sans-serif;	
+}
+.form .form-subtitulo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	font-family: 'Roboto', sans-serif;	
+	border-radius: 4px 4px 0 0;
+	background: #CCC;
+}
+.form .form-cuerpo{
+	flex: 1;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 10px;
+}
+.form-cuerpo .form-control{	
+	display: flex;
+	padding: 5px;
+}
+.form-cuerpo .label{	
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 10px;
+	padding: 5px;
+}
+.form-cuerpo .input,
+.form-cuerpo .textarea{
+	flex: 2;	
+	display: flex;	
+	padding: 5px;
+	font-size: 1em;
+	border-radius: 4px;
+}
+.form-cuerpo .textarea{		
+	resize: none;
+	font-family: 'Roboto', sans-serif;	
+}
+.form .form-pie{
+	flex: 0 0 50px;
+	display: flex;	
+	flex-flow: row nowrap;
+	justify-content: center;
+	padding: 5px;
+	border-radius: 0 0 4px 4px;
+	background: #CCC;
+}
+.form input[type="submit"],
+.form input[type="reset"],
+.form input[type="button"]{
+	flex: 1;
+	cursor: pointer;	
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+}
+/* Formulario de Inicio de Sesión */
+.form-login,
+.form-register,
+.form-forgot{
+	flex: 0 0 100%;
+	width: 60%;
+}
+.form-login .form-subtitulo,
+.form-register .form-subtitulo{
+	border-radius: 0;
+}
+.form-login .enlace-olvido,
+.form-login .enlace-registro,
+.form-register .enlace-registro{
+	flex: 1;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 10px;
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+}
+.form-login .enlace-registro,
+.form-register .enlace-registro{
+	border-bottom: 1px solid #EEE;
+	border-radius: 4px 4px 0 0;
+	background: #EEE;
+	color: #2A5159;
+}
+
+/* ------------------------------------------------------------------------------------- */
 /* ---------------------------- II. LAYOUT: MAQUETACIÓN WEB ---------------------------- */
 /* ------------------------------- ESCRITORIO Y PORTATIL ------------------------------- */
 /* ------------------------------------------------------------------------------------- */
