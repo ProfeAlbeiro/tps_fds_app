@@ -7,7 +7,16 @@ function validarLogin() {
     // Validar el acceso al Dashboard: Administrador
     if (correo == "admin@correo.com" && pass == "12345") {
         window.location = '../admin.html';
-    } else {
+    } 
+    // Validar el acceso al Dashboard: Cliente
+    else if (correo == "cliente@correo.com" && pass == "12345") {
+        window.location = '../customer.html';
+    }
+    // Validar el acceso al Dashboard: Vendedor
+    else if (correo == "vendedor@correo.com" && pass == "12345") {
+        window.location = '../seller.html';
+    }
+    else {
         alert('Los datos son incorrectos');
     }
     
