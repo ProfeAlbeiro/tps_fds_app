@@ -34,6 +34,16 @@ function validarLogin() {
         alert("No es un correo válido");
         document.getElementById('correo').focus();
     }
+    // Password: Cuando esté vacío
+    else if (pass === "") {
+        alert("La contraseña NO puede estar vacía");
+        document.getElementById('pass').focus();
+    }
+    // Password: Debe contener entre 5 y 8 caracteres
+    else if (pass.length < 5 || pass.length > 8) {
+        alert("La contraseña debe tener entre 5 y 8 caracteres");
+        document.getElementById('pass').focus();
+    }
     else {
         // Validar el acceso al Dashboard: Administrador
         if (correo == "admin@correo.com" && pass == "12345") {
