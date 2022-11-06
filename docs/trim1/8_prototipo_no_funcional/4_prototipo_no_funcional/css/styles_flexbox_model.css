@@ -212,6 +212,10 @@ body {
 
 
 /* Formularios en General */
+.paginas.forms{
+	align-items: center;
+	justify-content: center;
+}
 .form{
 	flex: 1;
 	display: flex;
