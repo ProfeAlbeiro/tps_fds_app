@@ -1,7 +1,5 @@
 formSession = document.getElementById('formSession');
-formSession.addEventListener('submit', function () {
-    validarLogin();
-});
+formSession.addEventListener('submit', validarLogin);
 
 function validarLogin() {
     // Frena el evento: Click
