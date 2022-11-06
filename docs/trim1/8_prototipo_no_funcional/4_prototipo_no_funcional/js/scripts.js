@@ -1,16 +1,22 @@
 /* -------------------------------------------------------------------------------- */
-/* DOM: CAPTURADOR DE CLICK EN EL DOM --------------------------------------------- */
+/* DOM: CAPTURADOR DE CLICK Y ID (CLASES) ----------------------------------------- */
 /* -------------------------------------------------------------------------------- */
-hacerClic = document.getElementById("contenedor");
-hacerClic.addEventListener('click', mainIndex);
-
+const capturaId = document.querySelectorAll(".captura-id");
+// Captura el Id
+capturaId.forEach(captura => {
+    captura.addEventListener("click", mainIndex);
+});
+// Método Principal
 function mainIndex() {
     id = event.target.getAttribute("id");
     if (id == "submint_login") {
         validarLogin();
-    }
+    }    
 }
 
+/* -------------------------------------------------------------------------------- */
+/* FUNCIONES ---------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
 function validarLogin() {
     // Frena el evento: Click
     event.preventDefault();
