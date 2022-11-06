@@ -1,5 +1,15 @@
-formSession = document.getElementById('formSession');
-formSession.addEventListener('submit', validarLogin);
+/* -------------------------------------------------------------------------------- */
+/* DOM: CAPTURADOR DE CLICK EN EL DOM --------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+hacerClic = document.getElementById("contenedor");
+hacerClic.addEventListener('click', mainIndex);
+
+function mainIndex() {
+    id = event.target.getAttribute("id");
+    if (id == "submint_login") {
+        validarLogin();
+    }
+}
 
 function validarLogin() {
     // Frena el evento: Click
@@ -21,6 +31,5 @@ function validarLogin() {
     }
     else {
         alert('Los datos son incorrectos');
-    }
-    
+    }    
 }
