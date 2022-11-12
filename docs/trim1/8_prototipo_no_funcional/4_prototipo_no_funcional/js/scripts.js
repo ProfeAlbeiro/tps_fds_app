@@ -47,13 +47,72 @@ function validarContac() {
         alert("Los Nombres deben tener entre 2 y 50 caracteres");
         document.getElementById('nombres').focus();
     }
+    // Apellidos: Cuando está vacío
+    else if (apellidos === "") {
+        alert("Los Apellidos NO pueden estar vacíos");
+        document.getElementById('apellidos').focus();
+    }
+    // Apellidos: No puede contener números o caracteres especiales
+    else if (!textoPatron.test(apellidos)) {
+        alert("Los Apellidos NO pueden contener números o caracteres especiales");
+        document.getElementById('apellidos').focus();
+    }
+    // Apellidos: No puede contener números o caracteres especiales
+    else if (apellidos.length < 2 || apellidos.length > 50) {
+        alert("Los Apellidos deben tener entre 2 y 50 caracteres");
+        document.getElementById('apellidos').focus();
+    }
+    // Correo: Cuando está vacío
+    else if (correo === "") {
+        alert("El Correo NO puede estar vacío");
+        document.getElementById('correo-cont').focus();
+    }
+    // Correo: Es un correo (@, .com, .es, etc)
+    else if (!correoPatron.test(correo)) {
+        alert("No es un correo válido");
+        document.getElementById('correo-cont').focus();
+    }
+    // Asunto: Cuando está vacío
+    else if (asunto === "") {
+        alert("Los Asunto NO pueden estar vacíos");
+        document.getElementById('asunto').focus();
+    }
+    // Asunto: No puede contener números o caracteres especiales
+    else if (!textoPatron.test(asunto)) {
+        alert("Los Asunto NO pueden contener números o caracteres especiales");
+        document.getElementById('asunto').focus();
+    }
+    // Asunto: No puede contener números o caracteres especiales
+    else if (asunto.length < 10 || asunto.length > 50) {
+        alert("Los Asunto deben tener entre 10 y 50 caracteres");
+        document.getElementById('asunto').focus();
+    }
+    // Mensaje: Cuando está vacío
+    else if (mensaje === "") {
+        alert("Los Mensaje NO pueden estar vacíos");
+        document.getElementById('mensaje').focus();
+    }
+    // Mensaje: No puede contener números o caracteres especiales
+    else if (!textoPatron.test(mensaje)) {
+        alert("Los Mensaje NO pueden contener números o caracteres especiales");
+        document.getElementById('mensaje').focus();
+    }
+    // Mensaje: No puede contener números o caracteres especiales
+    else if (mensaje.length < 30 || mensaje.length > 300) {
+        alert("Los Mensaje deben tener entre 30 y 300 caracteres");
+        document.getElementById('mensaje').focus();
+    }
     // Se envía el mensaje
     else {
         alert("El mensaje se ha enviado correctamente. En menos de 24 horas el Administrador se comunicará con Usted por medio de su Correo Electrónico");
+        document.getElementById('nombres').value = "";
+        document.getElementById('apellidos').value = "";
+        document.getElementById('correo-cont').value = "";
+        document.getElementById('asunto').value = "";
+        document.getElementById('mensaje').value = "";
         window.location = 'index.html#contactenos';        
     }
 }
-
 // Validar Login
 function validarLogin() {
     // Captura el valor que tienen los controles del formulario
