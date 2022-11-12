@@ -24,8 +24,15 @@ function mainIndex() {
     // Cancelar Login
     else if (id == "cancelar-login") {
         cancelarLogin();
+    } 
+    // Validar Registro
+    else if (id == "submit-register") {
+        validarRegister();
     }
-    
+    // Cancelar Registro
+    else if (id == "cancelar-register") {
+        cancelarRegister();
+    }
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -181,5 +188,100 @@ function validarLogin() {
 }
 // Cancelar Login
 function cancelarLogin() {
+    alert("No se ha guardado ningún dato");
+}
+// Validar Registro
+function validarRegister() {
+    // Captura el valor que tienen los controles del formulario
+    nombres = document.getElementById('nombres-reg').value;
+    apellidos = document.getElementById('apellidos-reg').value;
+    correo = document.getElementById('correo-reg').value;
+    pass = document.getElementById('pass-reg').value;
+    passConfirm = document.getElementById('conf-pass-reg').value;
+    // Expresiones Regulares para validar controles del formulario
+    let textoPatron = /^[ a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ]+$/;
+    let correoPatron = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    // Frena el evento: Click
+    event.preventDefault();
+    // Nombres: Cuando está vacío
+    if (nombres === "") {
+        alert("Los Nombres NO pueden estar vacíos");
+        document.getElementById('nombres-reg').focus();
+    }
+    // Nombres: No puede contener números o caracteres especiales
+    else if (!textoPatron.test(nombres)) {
+        alert("Los Nombres NO pueden contener números o caracteres especiales");
+        document.getElementById('nombres-reg').focus();
+    }
+    // Nombres: No puede contener números o caracteres especiales
+    else if (nombres.length < 2 || nombres.length > 50) {
+        alert("Los Nombres deben tener entre 2 y 50 caracteres");
+        document.getElementById('nombres-reg').focus();
+    }
+    // Apellidos: Cuando está vacío
+    else if (apellidos === "") {
+        alert("Los Apellidos NO pueden estar vacíos");
+        document.getElementById('apellidos-reg').focus();
+    }
+    // Apellidos: No puede contener números o caracteres especiales
+    else if (!textoPatron.test(apellidos)) {
+        alert("Los Apellidos NO pueden contener números o caracteres especiales");
+        document.getElementById('apellidos-reg').focus();
+    }
+    // Apellidos: No puede contener números o caracteres especiales
+    else if (apellidos.length < 2 || apellidos.length > 50) {
+        alert("Los Apellidos deben tener entre 2 y 50 caracteres");
+        document.getElementById('apellidos-reg').focus();
+    }
+    // Correo: Cuando está vacío
+    else if (correo === "") {
+        alert("El Correo NO puede estar vacío");
+        document.getElementById('correo-reg').focus();
+    }
+    // Correo: Es un correo (@, .com, .es, etc)
+    else if (!correoPatron.test(correo)) {
+        alert("No es un correo válido");
+        document.getElementById('correo-reg').focus();
+    }
+    // Password: Cuando esté vacío
+    else if (pass === "") {
+        alert("La contraseña NO puede estar vacía");
+        document.getElementById('pass-reg').focus();
+    }
+    // Password: Debe contener entre 5 y 8 caracteres
+    else if (pass.length < 5 || pass.length > 8) {
+        alert("La contraseña debe tener entre 5 y 8 caracteres");
+        document.getElementById('pass-reg').focus();
+    }
+    // Confirmación: Cuando esté vacío
+    else if (passConfirm === "") {
+        alert("La confirmación de contraseña NO puede estar vacía");
+        document.getElementById('conf-pass-reg').focus();
+    }
+    // Confirmación: Debe contener entre 5 y 8 caracteres
+    else if (passConfirm.length < 5 || passConfirm.length > 8) {
+        alert("La contraseña debe tener entre 5 y 8 caracteres");
+        document.getElementById('conf-pass-reg').focus();
+    }
+    // Password y Confirmación: Cuando no sean iguales
+    else if (pass !== passConfirm) {
+        alert("La Contraseña y la Confirmación debe ser iguales");
+        document.getElementById('pass-reg').value = "";
+        document.getElementById('conf-pass-reg').value = "";
+        document.getElementById('pass-reg').focus();
+    }
+    // Se envía el mensaje
+    else {
+        alert("Usuario Creado correctamente. El Administrador se comunicará con Usted por medio de su Correo Electrónico para asignarle el ROL");
+        document.getElementById('nombres-reg').value = "";
+        document.getElementById('apellidos-reg').value = "";
+        document.getElementById('correo-reg').value = "";
+        document.getElementById('pass-reg').value = "";
+        document.getElementById('conf-pass-reg').value = "";        
+        window.location = 'login.html';
+    }
+}
+// Cancelar Registro
+function cancelarRegister() {
     alert("No se ha guardado ningún dato");
 }
