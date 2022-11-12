@@ -9,11 +9,23 @@ capturaId.forEach(captura => {
 // Método Principal
 function mainIndex() {
     id = event.target.getAttribute("id");
-    if (id == "submint_login") {
-        validarLogin();
-    } else if (id == "submit-contac") {
+    // Validar Contacto
+    if (id == "submit-contac") {
         validarContac();
     }
+    // Cancelar Contacto
+    else if (id == "cancelar-contac") {
+        cancelarContac();
+    }
+    // Validar Login
+    else if (id == "submit-login") {
+        validarLogin();
+    }
+    // Cancelar Login
+    else if (id == "cancelar-login") {
+        cancelarLogin();
+    }
+    
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -113,6 +125,10 @@ function validarContac() {
         window.location = 'index.html#contactenos';        
     }
 }
+// Cancelar Contacto
+function cancelarContac() {    
+    alert("No se ha guardado ningún dato");
+}
 // Validar Login
 function validarLogin() {
     // Captura el valor que tienen los controles del formulario
@@ -162,4 +178,8 @@ function validarLogin() {
         }  
     }
       
+}
+// Cancelar Login
+function cancelarLogin() {
+    alert("No se ha guardado ningún dato");
 }
