@@ -61,18 +61,40 @@ function validarContac() {
     event.preventDefault();
     // Nombres: Cuando está vacío
     if (nombres === "") {
-        alert("Los Nombres NO pueden estar vacíos");
-        document.getElementById('nombres').focus();
+        swal({
+            title: "Verifique el campo Nombres",
+            text: "Los Nombres NO pueden estar vacíos",
+            icon: "error",
+            button: "Aceptar",
+        })
+        .then((value) => {
+            document.getElementById('nombres').focus();
+        });        
     }
     // Nombres: No puede contener números o caracteres especiales
     else if (!textoPatron.test(nombres)) {
-        alert("Los Nombres NO pueden contener números o caracteres especiales");
-        document.getElementById('nombres').focus();
+        swal({
+            title: "Verifique el campo Nombres",
+            text: "Los Nombres NO pueden contener números o caracteres especiales",
+            icon: "error",
+            button: "Aceptar",
+        })
+        .then((value) => {
+            document.getElementById('nombres').focus();
+        });	
+        
     }
     // Nombres: No puede contener números o caracteres especiales
     else if (nombres.length < 2 || nombres.length > 50) {
-        alert("Los Nombres deben tener entre 2 y 50 caracteres");
-        document.getElementById('nombres').focus();
+        swal({
+            title: "Verifique el campo Nombres",
+            text: "Los Nombres deben contener entre 2 y 50 caracteres",
+            icon: "error",
+            button: "Aceptar",
+        })
+        .then((value) => {
+            document.getElementById('nombres').focus();
+        });
     }
     // Apellidos: Cuando está vacío
     else if (apellidos === "") {
@@ -294,7 +316,7 @@ function cancelarRegister() {
     alert("No se ha guardado ningún dato");
     window.location = 'login.html';
 }
-// 
+// Validar Olvido Contraseña
 function validarForgot() {
     // Captura el valor que tienen los controles del formulario    
     correo = document.getElementById('correo-olv').value;
@@ -320,7 +342,7 @@ function validarForgot() {
     }
 
 }
-// 
+// Cancelar Olvido Contraseña
 function cancelarForgot() {
     alert("No se ha guardado ningún dato");
     window.location = 'login.html';
