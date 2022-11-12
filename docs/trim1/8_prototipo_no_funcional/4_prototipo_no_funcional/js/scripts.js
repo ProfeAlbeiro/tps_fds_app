@@ -33,6 +33,14 @@ function mainIndex() {
     else if (id == "cancelar-register") {
         cancelarRegister();
     }
+    // Validar Olvido Contraseña
+    else if (id == "submit-olvido") {
+        validarForgot();
+    }
+    // Cancelar Olvido Contraseña
+    else if (id == "cancelar-olvido") {
+        cancelarForgot();
+    }
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -270,7 +278,7 @@ function validarRegister() {
         document.getElementById('conf-pass-reg').value = "";
         document.getElementById('pass-reg').focus();
     }
-    // Se envía el mensaje
+    // Se envía el Registro de Usuario
     else {
         alert("Usuario Creado correctamente. El Administrador se comunicará con Usted por medio de su Correo Electrónico para asignarle el ROL");
         document.getElementById('nombres-reg').value = "";
@@ -284,4 +292,36 @@ function validarRegister() {
 // Cancelar Registro
 function cancelarRegister() {
     alert("No se ha guardado ningún dato");
+    window.location = 'login.html';
+}
+// 
+function validarForgot() {
+    // Captura el valor que tienen los controles del formulario    
+    correo = document.getElementById('correo-olv').value;
+    // Expresiones Regulares para validar controles del formulario    
+    let correoPatron = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    // Frena el evento: Click
+    event.preventDefault();
+    // Correo: Cuando está vacío
+    if (correo === "") {
+        alert("El Correo NO puede estar vacío");
+        document.getElementById('correo-olv').focus();
+    }
+    // Correo: Es un correo (@, .com, .es, etc)
+    else if (!correoPatron.test(correo)) {
+        alert("No es un correo válido");
+        document.getElementById('correo-olv').focus();
+    }
+    // Se envía el correo
+    else {
+        alert("La contraseña ha sido restaurada. Revise su correo electrónico y siga los pasos sugeridos");        
+        document.getElementById('correo-olv').value = "";        
+        window.location = 'login.html';
+    }
+
+}
+// 
+function cancelarForgot() {
+    alert("No se ha guardado ningún dato");
+    window.location = 'login.html';
 }
